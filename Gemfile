@@ -16,6 +16,7 @@ gem 'jquery-rails'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
+gem 'google-analytics-rails', '1.1.0'
 
 group :development, :test do
   gem 'better_errors'
