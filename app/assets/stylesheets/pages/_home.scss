@@ -4,7 +4,8 @@
  * ------------------------------------- */
 
 .who-are-ya h3 {
-  font-family: 'rakoon';
+font-family: 'Chelsea Market', cursive;
+
   font-size: 42px;
   color: #034e66;
   letter-spacing: 3px;
@@ -24,7 +25,8 @@
 }
 
 .our-journal h3 {
-    font-family: 'rakoon';
+font-family: 'Chelsea Market', cursive;
+
     font-size: 42px;
     color: #034e66;
     letter-spacing: 3px;
@@ -109,4 +111,10 @@
 #info_content:-moz-placeholder { /* Firefox 18- */
   color: #034e66;
   font-size:16px;
+}
+
+
+.border-bottomed {
+  height: 2px;
+  border-bottom: 1px solid #034e66;
 }

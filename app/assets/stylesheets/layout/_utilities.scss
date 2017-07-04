@@ -28,15 +28,23 @@
 }
 
 .form-control {
-  border-radius: 10px;
+  border-radius: 2px;
 }
 
 .btn {
-  border-radius: 10px;
-  color:#034e66;
+    width: 100%;
+    background: rgb(3, 78, 102);
+    color: white;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    transition: 1s;
 }
 
 .btn:hover {
-  background-color:#034e66;
-  color: white;
+  background-color:white;
+  color: #034e66;
+  transition: 1s;
 }
+
+
+
