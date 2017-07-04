@@ -74,7 +74,7 @@
 
 <div class="padded"></div>
 
-<div class="container our-journal text-center">
+<div class="container our-journal text-center" id="test2">
   <div class="row">
       <h3><span>/</span>  Contact nous GroW</h3>
     <div class="col-xs-12 col-md-4 col-md-offset-4">
@@ -90,3 +90,18 @@
 </div>
 
 <div class="padded"></div>
+
+
+
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+    $("#test").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#test2").offset().top
+        }, 2000);
+    });
+
+    });
+  <% end %>
+<% end %>
