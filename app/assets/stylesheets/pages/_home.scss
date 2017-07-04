@@ -2,3 +2,111 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+
+.who-are-ya h3 {
+  font-family: 'rakoon';
+  font-size: 42px;
+  color: #034e66;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.who-are-ya p {
+  color: #034e66;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.who-are-ya i {
+  color :#7fded4;
+  font-size: 18px;
+}
+
+.our-journal h3 {
+    font-family: 'rakoon';
+    font-size: 42px;
+    color: #034e66;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.our-journal span {
+  color: #7fded4;
+}
+
+#info_first_name::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size:16px;
+
+  color: #034e66;
+  font-size:16px;
+}
+#info_first_name::-moz-placeholder { /* Firefox 19+ */
+  color: #034e66;
+  font-size:16px;
+}
+#info_first_name:-ms-input-placeholder { /* IE 10+ */
+  color: #034e66;
+  font-size:16px;
+}
+#info_first_name:-moz-placeholder { /* Firefox 18- */
+  color: #034e66;
+  font-size:16px;
+}
+
+#info_email::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size:16px;
+
+  color: #034e66;
+  font-size:16px;
+}
+#info_email::-moz-placeholder { /* Firefox 19+ */
+  color: #034e66;
+  font-size:16px;
+}
+#info_email:-ms-input-placeholder { /* IE 10+ */
+  color: #034e66;
+  font-size:16px;
+}
+#info_email:-moz-placeholder { /* Firefox 18- */
+  color: #034e66;
+  font-size:16px;
+}
+
+#info_phone::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size:16px;
+
+  color: #034e66;
+  font-size:16px;
+}
+#info_phone::-moz-placeholder { /* Firefox 19+ */
+  color: #034e66;
+  font-size:16px;
+}
+#info_phone:-ms-input-placeholder { /* IE 10+ */
+  color: #034e66;
+  font-size:16px;
+}
+#info_phone:-moz-placeholder { /* Firefox 18- */
+  color: #034e66;
+  font-size:16px;
+}
+
+#info_content::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size:16px;
+
+  color: #034e66;
+  font-size:16px;
+}
+#info_content::-moz-placeholder { /* Firefox 19+ */
+  color: #034e66;
+  font-size:16px;
+}
+#info_content:-ms-input-placeholder { /* IE 10+ */
+  color: #034e66;
+  font-size:16px;
+}
+#info_content:-moz-placeholder { /* Firefox 18- */
+  color: #034e66;
+  font-size:16px;
+}

@@ -6,15 +6,14 @@
 $base-font: "Open Sans", "Helvetica", "sans-serif";
 $header-font: "Raleway", "Helvetica", "sans-serif";
 
-// Local fonts (uncomment following lines)
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
+@font-face {
+  font-family: "Rakoon";
+  src: font-url('Rakoon_PersonalUse.eot');
+  src: font-url('Rakoon_PersonalUse.eot?#iefix') format('embedded-opentype'),
+       font-url('Rakoon_PersonalUse.woff') format('woff'),
+       font-url('Rakoon_PersonalUse.ttf') format('truetype')
+}
+$my-font: "Rakoon";
 
 // Font-size and line-height
 $base-size: 16px;
