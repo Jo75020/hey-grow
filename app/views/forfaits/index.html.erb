@@ -1,4 +1,3 @@
-<div class="padded-little"></div>
 <div class="banner-forfaits" style="background-image:url('<%= asset_path("banner-forfaits.png") %> ')">
   <div class="banner-content">
     <% image_tag "logo.png" %>
@@ -7,7 +6,8 @@
     </br>
     <p><span style="color: #7fded4;">•</span> Site Vitrine <span style="color: #7fded4;">•</span> E-Commerce <span style="color: #7fded4;">•</span> Premium <span style="color: #7fded4;">•</span> Prototype&MVP</p>
   </div>
-  <i class="fa fa-arrow-down"></i>
+  <div class="padded-little"></div>
+  <i class="fa fa-arrow-down" style="color:black;margin-top:12px;font-size: 26px;cursor: pointer;"></i>
 </div>
 
 <% f = Forfait.first  %>
