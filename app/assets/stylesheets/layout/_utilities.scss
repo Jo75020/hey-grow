@@ -32,18 +32,25 @@
 }
 
 .btn {
-    width: 100%;
-    background: rgb(3, 78, 102);
-    color: white;
-    border-radius: 2px;
+    background: white;
+    color: #7fded4;
+    border-radius: 7px;
     margin-bottom: 10px;
+    -webkit-transition: 1s;
     transition: 1s;
+    border: 1px solid white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 1%;
+    padding-top: 1%;
 }
 
 .btn:hover {
-  background-color:white;
-  color: #034e66;
+  background-color:#7fded4;
+  color: white;
   transition: 1s;
+  border-color: white;
+  border: 1px solid;
 }
 
 
