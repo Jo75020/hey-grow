@@ -1,0 +1,2 @@
+class Forfait < ApplicationRecord
+end
