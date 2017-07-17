@@ -92,6 +92,7 @@
   padding: 0 10px;
   font-size: 14px;
   outline: none;
+  transition: 2s;
 }
 .navbar-wagon-search-input:focus  {
   border: 1px solid #CCCCCC;
@@ -126,4 +127,9 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+.displayed {
+  transition: 2s;
+  opacity:0;
 }

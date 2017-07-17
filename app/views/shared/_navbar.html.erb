@@ -1,4 +1,4 @@
-<div class="navbar-wagon navbar-wagon-fixed">
+<div class="navbar-wagon navbar-wagon-fixed displayed" id="mynav">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "logo.png" %>
@@ -25,6 +25,8 @@
     <% end %>
 
     <!-- Button (call-to-action) -->
+    <%= link_to "Offres", forfaits_path, class: "btn-nav" %>
+    <%= link_to "Formations", forfaits_path, class: "btn-nav" %>
     <p class="navbar-wagon-item navbar-wagon-button btn" id="test">Contact nous Grow</p>
   </div>
 
@@ -32,3 +34,18 @@
 
 </div>
 
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+    if (document.body.scrollTop > 50 ) {
+        document.getElementById("mynav").className = "navbar-wagon navbar-wagon-fixed";
+    } else {
+        document.getElementById("mynav").className = "navbar-wagon navbar-wagon-fixed displayed";
+    }
+}
+    });
+  <% end %>
+<% end %>

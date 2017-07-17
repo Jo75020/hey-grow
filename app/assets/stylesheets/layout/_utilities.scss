@@ -3,7 +3,9 @@
  * These are examples of utilities classes
  * Feel free to change them and create your own
  * ------------------------------------- */
-
+a {
+  text-decoration:none;
+}
 // Paddings
 .padded {
   padding-top: 5em;
@@ -52,6 +54,27 @@
   border-color: white;
   border: 1px solid;
 }
+.btn-nav {
+    background: white;
+    color: #7fded4;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    -webkit-transition: 1s;
+    transition: 1s;
+    border: 1px solid white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    text-decoration:none;
+}
 
+.btn-nav:hover {
+  text-decoration:none;
+  color: #7fded4;
+  transition: 1s;
+  border-color: #7fded4;
+  border: 1px solid;
+}
 
 
