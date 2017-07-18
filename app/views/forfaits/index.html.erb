@@ -36,8 +36,10 @@
   <span><%= f.description %>.</span>
   </br>
   </br>
+  <%= form_tag orders_path do %>
   <%= hidden_field_tag 'forfait_id', f.id %>
   <%= submit_tag 'Commandez maintenant !', class: 'btn-forfaits-4' %>
+  <% end %>
   </div>
   <div class="col-md-6">
     <%= image_tag "forfait-4.png" %>
