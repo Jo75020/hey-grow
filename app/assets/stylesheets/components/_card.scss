@@ -1,7 +1,13 @@
 .card img {
 width: 100%;
+opacity: 0.5;
+transition: 1s;
 }
-
+.card img:hover {
+width: 100%;
+opacity: 1;
+transition: 1s;
+}
 .card {
   box-shadow: 0 50px 60px 0 rgba(121, 184, 195, 0.3);
 }

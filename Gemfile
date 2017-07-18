@@ -9,6 +9,7 @@ gem 'puma'
 gem 'rails', '5.0.2'
 gem 'redis'
 
+gem 'money-rails'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
