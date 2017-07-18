@@ -10,43 +10,6 @@
   <i class="fa fa-arrow-down" id="go-down" style="color:black;font-size: 32px;cursor: pointer;"></i>
 </div>
 
-<% f = Forfait.first  %>
-
-<div class="col-md-6 forfait-wrapper" id="here-is-down" style="background:linear-gradient(-225deg, rgb(250, 116, 119) 0%, rgb(213, 76, 84) 30%)">
-  <div class="col-md-6">
-    <p style="text-align: right;"><%= humanized_money_with_symbol(f.price) %></p>
-  <h3><%= f.title  %></h3>
-  <span><%= f.description %>.</span>
-  </br>
-  </br>
-  <%= form_tag orders_path do %>
-  <%= hidden_field_tag 'forfait_id', f.id %>
-  <%= submit_tag 'Commandez maintenant !', class: 'btn-forfaits' %>
-<% end %>
-  </div>
-  <div class="col-md-6">
-    <%= image_tag "forfait-1.png" %>
-  </div>
-</div>
-
-<% f = Forfait.second  %>
-<div class="col-md-6 forfait-wrapper" style="background:linear-gradient(225deg, rgb(78, 44, 49) 0%, rgb(70, 52, 58) 30%)">
-  <div class="col-md-6">
-    <p style="text-align: right;"><%= humanized_money_with_symbol(f.price) %></p>
-  <h3><%= f.title  %></h3>
-  <span><%= f.description %>.</span>
-  </br>
-  </br>
-  <%= form_tag orders_path do %>
-  <%= hidden_field_tag 'forfait_id', f.id %>
-  <%= submit_tag 'Commandez maintenant !', class: 'btn-forfaits-2' %>
-<% end %>
-  </div>
-  <div class="col-md-6">
-    <%= image_tag "forfait-2.png" %>
-  </div>
-</div>
-
 <% f = Forfait.third  %>
 <div class="col-md-6 forfait-wrapper" style="background:linear-gradient(30deg, rgb(15, 87, 110) 0%, rgb(50, 111, 131) 30%)">
   <div class="col-md-6">
@@ -65,7 +28,7 @@
   </div>
 </div>
 
-<% f = Forfait.last  %>
+<% f = Forfait.second  %>
 <div class="col-md-6 forfait-wrapper" style="background:linear-gradient(-30deg, rgb(127, 222, 212) 0%, rgba(127, 222, 212, 0.65) 30%)">
   <div class="col-md-6">
     <p style="text-align: right;"><%= humanized_money_with_symbol(f.price) %></p>
@@ -80,6 +43,43 @@
     <%= image_tag "forfait-4.png" %>
   </div>
 </div>
+
+<% f = Forfait.first  %>
+<div class="col-md-6 forfait-wrapper" id="here-is-down" style="background:linear-gradient(-225deg, rgb(250, 116, 119) 0%, rgb(213, 76, 84) 30%)">
+  <div class="col-md-6">
+    <p style="text-align: right;"><%= humanized_money_with_symbol(f.price) %></p>
+  <h3><%= f.title  %></h3>
+  <span><%= f.description %>.</span>
+  </br>
+  </br>
+  <%= form_tag orders_path do %>
+  <%= hidden_field_tag 'forfait_id', f.id %>
+  <%= submit_tag 'Commandez maintenant !', class: 'btn-forfaits' %>
+<% end %>
+  </div>
+  <div class="col-md-6">
+    <%= image_tag "forfait-1.png" %>
+  </div>
+</div>
+
+<% f = Forfait.last  %>
+<div class="col-md-6 forfait-wrapper" style="background:linear-gradient(225deg, rgb(78, 44, 49) 0%, rgb(70, 52, 58) 30%)">
+  <div class="col-md-6">
+    <p style="text-align: right;"><%= humanized_money_with_symbol(f.price) %></p>
+  <h3><%= f.title  %></h3>
+  <span><%= f.description %>.</span>
+  </br>
+  </br>
+  <%= form_tag orders_path do %>
+  <%= hidden_field_tag 'forfait_id', f.id %>
+  <%= submit_tag 'Commandez maintenant !', class: 'btn-forfaits-2' %>
+<% end %>
+  </div>
+  <div class="col-md-6">
+    <%= image_tag "forfait-2.png" %>
+  </div>
+</div>
+
 
 <div id='mydiv'></div>
 
