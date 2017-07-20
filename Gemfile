@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.3.3'
 
+gem 'jquery-rails'
+gem 'coffee-rails', '~> 4.1'
 gem 'devise'
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'

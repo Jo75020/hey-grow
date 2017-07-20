@@ -1,14 +1,15 @@
-class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+class RegistrationsController < Devise::RegistrationsController
 
-  def home
-    @info = Info.new
+  def new
+       @user = User.new(params[:user])
+     if @user.save!
+      redirect_to root_path
+    else
+      redirect_to forfaits_path
+    end
   end
 
-
-
   private
-
   def user_params
     # *Strong params*: You need to *whitelist* what can be updated by the user
     # Never trust user data!

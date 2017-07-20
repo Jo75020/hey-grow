@@ -1,6 +1,35 @@
-<h1>Order</h1>
-<ul>
-  <li>Status: <%= @order.state %></li>
-  <li>Item: <%= @order.forfait_title %></li>
-  <li>Amount: <%= humanized_money_with_symbol(@order.amount) %></li>
-<ul>
+<div class="banner-order" style="background-image:linear-gradient(-225deg, rgb(127, 222, 212) 0%, rgba(127, 222, 212, 0.65) 30%), url('<%= asset_path("2.jpg") %> ')">
+  <div class="container">
+  <div class="row">
+      <div class="banner-content" >
+        <h1>Merci !</h1>
+          <p>Status: <%= @order.state %></p>
+          <p>Item: <%= @order.forfait_title %></p>
+          <p>Amount: <%= humanized_money_with_symbol(@order.amount) %></p>
+      </div>
+      </div>
+    </div>
+</div>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-xs-6">
+      <h2>Hello</h2>
+    </div>
+    <div class="col-xs-6">
+      <h2>Hello</h2>
+    </div>
+  </div>
+</div>
+<div class="padded"></div>
+<div class="padded"></div>
+<h1>Hello</h1>
+
+
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+    $("#mynav").toggleClass("displayed");
+    });
+  <% end %>
+<% end %>
+

@@ -7,11 +7,15 @@ transition: 1s;
 width: 100%;
 opacity: 1;
 transition: 1s;
+  text-decoration: none;
 }
 .card {
   box-shadow: 0 50px 60px 0 rgba(121, 184, 195, 0.3);
   cursor: pointer;
+  text-decoration: none;
 }
+
+
 
 .card-date {
   padding: 3% 3% 3% 6%;

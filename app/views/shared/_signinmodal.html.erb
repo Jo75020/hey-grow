@@ -1,0 +1,53 @@
+<div class="modal modal-lg container text-center" id="signInModal" style="color:white;">
+  <div class="padded"></div>
+    <div class="row">
+     <div class="mcontent col-xs-4 col-xs-offset-4">
+        <div class="mheader">
+          <button type="button" class="close" data-dismiss="modal">X</button>
+          <h4 class="modal-title">Tu veux te connecter ?</h4>
+          <p>c'est par ici !</p>
+        </div>
+        <div class="mbody">
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {id: "form-signin"}, remote: true) do |f| %>
+        <p>Email</p>
+        <%= f.input :email, label: false, required: true, autofocus: true %>
+        <p>Password</p>
+        <%= f.input :password, label: false, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+        </div>
+        <div class="mfooter">
+          <%= f.button :submit, "Se connecter", class: 'btn-nav' %>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <% end %>
+        </div>
+      </div>
+    </div>
+</div>
+
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+
+$(document).ready(function () {
+
+    $('#form-signin').validate({ // initialize the plugin
+        rules: {
+            field1: {
+                required: true,
+                email: true
+            },
+            field2: {
+                required: true,
+                minlength: 5
+            }
+        },
+        submitHandler: function (form) { // for demo
+
+            form.submit();
+
+            return false; // for demo
+        }
+    });
+
+
+});
+  <% end %>
+<% end %>

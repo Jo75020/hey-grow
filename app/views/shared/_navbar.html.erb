@@ -25,6 +25,16 @@
     <% end %>
 
     <!-- Button (call-to-action) -->
+ <% if user_signed_in? %>
+        <p class="btn-nav">Bienvenue <%= current_user.email %></p>
+        <%= link_to destroy_user_session_path, method: :delete, class: 'btn-nav' do %>
+            <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Se déconnecter") %>
+          <% end %>
+
+        <% else %>
+        <%= link_to "Connexion", new_user_session_path, :id => 'login', "data-toggle" => "modal", 'data-target' => '#signInModal', class:"btn-nav" %>
+        <%= link_to "S\'inscrire", new_user_registration_path, :id => 'login', "data-toggle" => "modal", 'data-target' => '#signUpModal', class:"btn-nav" %>
+        <% end %>
     <%= link_to "Offres", forfaits_path, class: "btn-nav" %>
     <%= link_to "Formations", forfaits_path, class: "btn-nav" %>
     <p class="navbar-wagon-item navbar-wagon-button btn" id="test">Contact nous Grow</p>
@@ -33,10 +43,15 @@
   <!-- Dropdown list appearing on mobile only -->
 
 </div>
+<%= render "shared/signupmodal" %>
+<%= render "shared/signinmodal" %>
+
+
 
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
     $(document).ready(function() {
+
 window.onscroll = function() {myFunction()};
 
 function myFunction() {
@@ -46,6 +61,7 @@ function myFunction() {
         document.getElementById("mynav").className = "navbar-wagon navbar-wagon-fixed displayed";
     }
 }
-    });
+
+});
   <% end %>
 <% end %>
