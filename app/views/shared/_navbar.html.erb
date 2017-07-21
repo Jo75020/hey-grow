@@ -1,7 +1,7 @@
 <div class="navbar-wagon navbar-wagon-fixed displayed" id="mynav">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png" %>
+    <%= image_tag "logo-4.png" %>
   <% end %>
 
   <!-- Right Navigation -->
@@ -26,9 +26,9 @@
 
     <!-- Button (call-to-action) -->
  <% if user_signed_in? %>
-        <p class="btn-nav">Bienvenue <%= current_user.email %></p>
+        <p class="btn-nav">Bienvenue <%= current_user.username %></p>
         <%= link_to destroy_user_session_path, method: :delete, class: 'btn-nav' do %>
-            <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Se déconnecter") %>
+            <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "") %>
           <% end %>
 
         <% else %>
@@ -37,7 +37,7 @@
         <% end %>
     <%= link_to "Offres", forfaits_path, class: "btn-nav" %>
     <%= link_to "Formations", forfaits_path, class: "btn-nav" %>
-    <p class="navbar-wagon-item navbar-wagon-button btn" id="test">Contact nous Grow</p>
+    <p class="navbar-wagon-item navbar-wagon-button btn" id="test">Contact</p>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->

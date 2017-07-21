@@ -18,15 +18,17 @@
        </ul>
         </div>
         <% end %>
+        <p>Prénom et nom</p>
+        <%= f.input :username, label: false, required: true, autofocus: true %>
         <p>Email</p>
         <%= f.input :email, label: false, required: true, autofocus: true %>
-        <p>Password</p>
+        <p>Mot de passe</p>
         <%= f.input :password, label: false, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-        <p>Password again</p>
+        <p>Mot de passe again</p>
         <%= f.input :password_confirmation, label: false, required: true %>
         </div>
         <div class="mfooter">
-          <%= f.button :submit, "S\'inscrire", class: 'btn-nav' %>
+          <%= f.button :submit, "S\'inscrire", class: 'btn btn-default' %>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
