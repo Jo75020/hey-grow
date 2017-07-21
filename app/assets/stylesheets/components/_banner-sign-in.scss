@@ -1,0 +1,59 @@
+.banner-sign-in {
+  color: white;
+  height: 100vh;
+  text-align: center;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+  margin:0;
+  padding:0;
+  background:no-repeat center fixed;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisée */
+
+}
+.banner-sign-in h1 {
+    font-family: 'montserrat';
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.banner-sign-in h3 {
+    font-family: 'montserrat';
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.banner-sign-in p {
+  letter-spacing: 0.3em;
+    font-size: 18px;
+    margin-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+#new_info > div > label {
+  display: none;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6%;
+}
+
+.form-vertical {
+  background: rgba(255, 255, 255, 0.45);
+    padding: 8%;
+    border-radius: 10px;
+}
