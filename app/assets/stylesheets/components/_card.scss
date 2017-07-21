@@ -2,17 +2,20 @@
 width: 100%;
 opacity: 0.5;
 transition: 1s;
+background-size: cover !important;
+background:no-repeat center fixed;
 }
 .card img:hover {
 width: 100%;
 opacity: 1;
 transition: 1s;
-  text-decoration: none;
+text-decoration: none;
 }
 .card {
   box-shadow: 0 50px 60px 0 rgba(121, 184, 195, 0.3);
   cursor: pointer;
   text-decoration: none;
+
 }
 
 
@@ -44,3 +47,53 @@ transition: 1s;
 font-family: 'montserrat';
 
 }
+.img-card-up {
+    transition: 2s;
+
+}
+.text-inside-card a {
+  text-decoration: none;
+}
+
+.first-text-inside-card {
+  opacity: 0;
+  transition: 2s;
+  padding: 9%;
+  color: white;
+
+}
+
+.first-text-inside-card-hovered {
+  transition: 2s;
+  opacity: 1;
+}
+
+
+.second-text-inside-card {
+  opacity: 0;
+  transition: 2s;
+  padding: 9%;
+  color: white;
+
+}
+
+.second-text-inside-card-hovered {
+  transition: 2s;
+  opacity: 1;
+}
+
+.third-text-inside-card {
+  opacity: 0;
+  transition: 2s;
+  padding: 9%;
+  color: white;
+
+}
+
+
+.third-text-inside-card-hovered {
+  transition: 2s;
+  opacity: 1;
+}
+
+

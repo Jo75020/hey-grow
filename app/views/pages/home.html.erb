@@ -29,8 +29,13 @@
     <h3><span>#</span>Nos Offres</h3>
     <div class="padded-little"></div>
       <div class="col-md-4">
-      <%= link_to forfaits_path, id:"out-texted" do %>
-        <div class="card">
+        <div class="card" id="first-card">
+          <div class="img-card-up" style="background-image:linear-gradient(-225deg, rgb(127, 222, 212) 0%, rgba(3, 78, 102, 0.48) 30%),url('<%= asset_path("agence-img.jpg") %> ')">
+          <div class="first-text-inside-card" id="first-img-card" >
+          <p style="font-size: 20px; color:white;line-height: 1.6em;">Vous êtes entrepreneur, vous avez l'idée du siècle et vous voulez la lancer rapidement. Vous savez que cela va marcher mais il vous manque quelqu'un pour la réaliser.</p>
+          </div>
+          </div>
+          <%= link_to forfaits_path, id:"out-texted" do %>
           <div class="bottom-body">
             <div class="card-date">
             <p>Developpement web</p>
@@ -39,14 +44,17 @@
             <p>Forfaits Site Web</p>
             </div>
           </div>
-          <div class="img-card-up">
-          <%= image_tag "agence-img.jpg" %>
-          </div>
         </div>
         <% end %>
       </div>
       <div class="col-md-4">
-        <div class="card">
+        <div class="card" id="second-card">
+          <div class="img-card-up" style="background-image:linear-gradient(-225deg, rgb(127, 222, 212) 0%, rgba(3, 78, 102, 0.48) 30%),url('<%= asset_path("Paint.jpg") %> ')">
+          <div class="second-text-inside-card" id="second-img-card" >
+          <p style="font-size: 20px; color:white;line-height: 2em;">Vous aidez à définir une statégie WEB opportune à votre marché, à vos clients et ainsi vous aider à atteindre vos objectifs de communication.</p>
+          </div>
+          </div>
+          <%= link_to forfaits_path, id:"out-texted" do %>
           <div class="bottom-body">
             <div class="card-date">
             <p>Startup</p>
@@ -55,13 +63,17 @@
             <p>Formations</p>
             </div>
           </div>
-          <div class="img-card-up">
-          <%= image_tag "Paint.jpg" %>
-          </div>
         </div>
+        <% end %>
       </div>
       <div class="col-md-4">
-        <div class="card">
+        <div class="card" id="third-card">
+          <div class="img-card-up" style="background-image:linear-gradient(-225deg, rgb(127, 222, 212) 0%, rgba(3, 78, 102, 0.48) 30%),url('<%= asset_path("Animation.jpg") %> ')">
+          <div class="third-text-inside-card" id="third-img-card" >
+          <p style="font-size: 20px; color:white;line-height: 2em;">Parce que avez des besoins spécifiaques et que vous aimez aussi nous rencontrer. Nous vous proposons de vous rappeler dans les 2 heures.</p>
+          </div>
+          </div>
+          <%= link_to forfaits_path, id:"out-texted" do %>
           <div class="bottom-body">
             <div class="card-date">
             <p>Devis personnalisés</p>
@@ -70,10 +82,8 @@
             <p>Get what u want</p>
             </div>
           </div>
-          <div class="img-card-up">
-          <%= image_tag "Animation.jpg" %>
-          </div>
         </div>
+        <% end %>
       </div>
     </div>
   </div>
@@ -107,6 +117,15 @@
         }, 2000);
     });
 
+    $("#first-card").hover(function(){
+      $("#first-img-card").toggleClass("first-text-inside-card-hovered");
+    });
+    $("#second-card").hover(function(){
+      $("#second-img-card").toggleClass("second-text-inside-card-hovered");
+    });
+    $("#third-card").hover(function(){
+      $("#third-img-card").toggleClass("third-text-inside-card-hovered");
+    });
     });
   <% end %>
 <% end %>
