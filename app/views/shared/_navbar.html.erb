@@ -26,7 +26,7 @@
 
     <!-- Button (call-to-action) -->
  <% if user_signed_in? %>
-        <p class="btn-nav">Bienvenue <%= current_user.username %></p>
+        <p class="btn-nav">Hello <%= current_user.username %></p>
         <%= link_to destroy_user_session_path, method: :delete, class: 'btn-nav' do %>
             <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "") %>
           <% end %>
