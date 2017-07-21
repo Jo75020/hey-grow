@@ -25,19 +25,20 @@
     <% end %>
 
     <!-- Button (call-to-action) -->
+    <%= link_to "Forfaits", forfaits_path, class: "btn" %>
+    <%= link_to "Formations", forfaits_path, class: "btn" %>
  <% if user_signed_in? %>
-        <p class="btn-nav">Hello <%= current_user.username %></p>
+        <p class="btn-nav"><%= current_user.username %></p>
         <%= link_to destroy_user_session_path, method: :delete, class: 'btn-nav' do %>
             <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "") %>
           <% end %>
 
         <% else %>
-        <%= link_to "Connect toi GroW", new_user_session_path, :id => 'login', "data-toggle" => "modal", 'data-target' => '#signInModal', class:"btn-nav" %>
         <%= link_to "S\'inscrire", new_user_registration_path, :id => 'login', "data-toggle" => "modal", 'data-target' => '#signUpModal', class:"btn-nav" %>
+        <%= link_to "Se connecter", new_user_session_path, :id => 'login', "data-toggle" => "modal", 'data-target' => '#signInModal', class:"btn-nav" %>
+
         <% end %>
-    <%= link_to "Offres", forfaits_path, class: "btn-nav" %>
-    <%= link_to "Formations", forfaits_path, class: "btn-nav" %>
-    <p class="navbar-wagon-item navbar-wagon-button btn" id="test">Contact</p>
+
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
