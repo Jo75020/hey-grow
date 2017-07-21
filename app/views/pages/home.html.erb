@@ -6,28 +6,37 @@
     <p><span style="color: black;">•</span> SEO <span style="color: black;">•</span> LeanStartup <span style="color: black;">•</span> Prototype&MVP <span style="color: black;">•</span> GrowthHacking</p>
   </div>
   <div class="padded-little"></div>
-  <%= link_to "Lance toi !", forfaits_path, class: "btn btn-primary" %>
+          <%= link_to "S\'inscrire", new_user_registration_path, :id => 'login', "data-toggle" => "modal", 'data-target' => '#signUpModal', class:"btn" %>
 </div>
 
 <div class="padded-little"></div>
 
-<div class="container who-are-ya text-center">
-  <div class="row">
-    <div class="col-xs-12">
-    <h3><span>#</span>Notre Objectif</h3>
-    <div class="padded-little"></div>
-    <p>Vous aidez à définir une statégie WEB opportune à votre marché, à vos clients et ainsi vous aider à atteindre vos objectifs de communication.</p>
-    </div>
-  </div>
-</div>
 
-<div class="padded-little"></div>
 
 <div class="container our-journal text-center">
   <div class="row">
     <div class="col-xs-12">
-    <h3><span>#</span>Nos Offres</h3>
+    <h3><%= image_tag "logo.png" %></h3>
     <div class="padded-little"></div>
+      <div class="col-md-4">
+        <div class="card" id="second-card">
+          <div class="img-card-up" style="background-image:linear-gradient(-225deg, rgb(127, 222, 212) 0%, rgba(3, 78, 102, 0.48) 30%),url('<%= asset_path("Paint.jpg") %> ')">
+          <div class="second-text-inside-card" id="second-img-card" >
+          <p style="font-size: 16px; color:white;line-height: 2.6em;">Vous aides à définir une statégie WEB opportune à votre marché, à vos clients et ainsi vous aider à atteindre vos objectifs de communication.</p>
+          </div>
+          </div>
+          <%= link_to forfaits_path, id:"out-texted" do %>
+          <div class="bottom-body">
+            <div class="card-date">
+            <p>Startup</p>
+            </div>
+            <div class="card-title">
+            <p>Formations</p>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
       <div class="col-md-4">
         <div class="card" id="first-card">
           <div class="img-card-up" style="background-image:linear-gradient(-225deg, rgb(127, 222, 212) 0%, rgba(3, 78, 102, 0.48) 30%),url('<%= asset_path("agence-img.jpg") %> ')">
@@ -42,25 +51,6 @@
             </div>
             <div class="card-title">
             <p>Forfaits Site Web</p>
-            </div>
-          </div>
-        </div>
-        <% end %>
-      </div>
-      <div class="col-md-4">
-        <div class="card" id="second-card">
-          <div class="img-card-up" style="background-image:linear-gradient(-225deg, rgb(127, 222, 212) 0%, rgba(3, 78, 102, 0.48) 30%),url('<%= asset_path("Paint.jpg") %> ')">
-          <div class="second-text-inside-card" id="second-img-card" >
-          <p style="font-size: 16px; color:white;line-height: 2.6em;">Vous aidez à définir une statégie WEB opportune à votre marché, à vos clients et ainsi vous aider à atteindre vos objectifs de communication.</p>
-          </div>
-          </div>
-          <%= link_to forfaits_path, id:"out-texted" do %>
-          <div class="bottom-body">
-            <div class="card-date">
-            <p>Startup</p>
-            </div>
-            <div class="card-title">
-            <p>Formations</p>
             </div>
           </div>
         </div>
@@ -89,11 +79,62 @@
   </div>
 </div>
 
-<div class="padded"></div>
 
+<div class="padded-little"></div>
+
+<div class="container who-are-ya text-center">
+  <div class="row">
+    <div class="col-xs-12">
+    <h3>La Méthode</h3>
+    <div class="padded-little"></div>
+    <p>Vous aidez à définir une statégie WEB opportune à votre marché, à vos clients et ainsi vous aider à atteindre vos objectifs de communication.</p>
+    </div>
+  </div>
+</div>
+<div class="padded-little"></div>
+
+<div class="container text-center" style="background-image:linear-gradient(-225deg, rgba(143, 226, 217, 0.46) 0%, rgba(202, 239, 235, 0.84) 30%),url('<%= asset_path("inside-banner.jpg") %> ');background-position:30% 70%;width: 100%;padding-bottom: 0;">
+  <div class="row">
+  <div class="col-md-12">
+    <div class="col-md-4 method-wrapper" style="">
+          <div><p>Iteration</p></div>
+          <div class="widthed"></div>
+      <div><i class="fa fa-align-justify" aria-hidden="true"></i></div>
+    </div>
+    <div class="col-md-4 method-wrapper-outflexed">
+      <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+      <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+      <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+    </div>
+    <div class="col-md-4 method-wrapper">
+      <i class="fa fa-bar-chart" aria-hidden="true" ></i>
+      <div class="widthed"></div>
+      <p>Test</p>
+    </div>
+  </div>
+  <div class="col-md-12">
+      <div class="col-md-5 method-wrapper">
+        <p>Analyse</p>
+        <div class="widthed"></div>
+        <i class="fa fa-pie-chart" aria-hidden="true"></i>
+      </div>
+    <div class="col-md-2 method-wrapper-outflexed">
+      <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+      <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+    </div>
+    <div class="col-md-5 method-wrapper" style="">
+        <i class="fa fa-users" aria-hidden="true"></i>
+        <div class="widthed"></div>
+        <p>Traffic</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="padded-little"></div>
 <div class="container our-journal text-center" id="test2">
   <div class="row">
-      <h3><span>#</span>Contact nous GroW</h3>
+      <h3>Contact</h3>
     <div class="col-xs-12 col-md-4 col-md-offset-4">
     <%= simple_form_for @info do |f| %>
       <%= f.input :email, placeholder: 'Email', label: 'Email' %>
@@ -104,10 +145,8 @@
     </div>
   </div>
 </div>
-
-<div class="padded"></div>
-
-
+<div class="padded-little"></div>
+    <%= render 'shared/footer' %>
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
     $(document).ready(function() {
