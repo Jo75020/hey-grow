@@ -18,7 +18,7 @@
         </div>
         <div class="mfooter">
           <%= f.button :submit, "Se connecter", class: 'btn-nav' %>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <%= link_to "Inscris toi", new_user_registration_path, :id => 'login', "data-toggle" => "modal", 'data-target' => '#signUpModal', class:"btn-nav" %>
           <% end %>
         </div>
       </div>
