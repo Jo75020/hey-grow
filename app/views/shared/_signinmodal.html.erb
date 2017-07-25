@@ -22,34 +22,7 @@
       </div>
     </div>
 </div>
-<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js">
-  $(document).ready(function () {
 
-    $('#form-signin').validate({ // initialize the plugin
-        rules: {
-            field1: {
-                required: true,
-                email: true
-
-            },
-            field2: {
-                required: true,
-                minlength: 5
-            }
-        },
-
-        submitHandler: function (form) { // for demo
-
-            form.submit();
-            document.location.reload(true);
-            return false; // for demo
-        }
-
-    });
-
-
-});
-</script>
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
 

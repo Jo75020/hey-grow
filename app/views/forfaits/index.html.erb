@@ -20,15 +20,10 @@
   <span>Pour faire une estimation</span>
   </br>
   </br>
-  <% if user_signed_in? %>
+
   <%= form_tag orders_path do %>
   <%= hidden_field_tag 'forfait_id', f.id %>
   <%= submit_tag 'Faire une estimation!', class: 'btn-forfaits-3' %>
-  <% end %>
-  <% else %>
-  <%= link_to "Connect toi", new_user_session_path, :id => 'login', "data-toggle" => "modal", 'data-target' => '#signInModal', class:"btn-forfaits-3" %></br><p style="text-align: left;padding:2%;">ou</p>
-          <%= link_to "Inscris toi", new_user_registration_path, :id => 'login', "data-toggle" => "modal", 'data-target' => '#signUpModal', class:"btn-forfaits-3" %>
-
   <% end %>
   </div>
   <div class="col-md-6">
@@ -45,14 +40,9 @@
   <span>Pour faire une estimation</span>
   </br>
   </br>
-<% if user_signed_in? %>
   <%= form_tag orders_path do %>
   <%= hidden_field_tag 'forfait_id', f.id %>
   <%= submit_tag 'Faire une estimation!', class: 'btn-forfaits-3' %>
-  <% end %>
-  <% else %>
-  <%= link_to "Connect toi", new_user_session_path, :id => 'login', "data-toggle" => "modal", 'data-target' => '#signInModal', class:"btn-forfaits-4" %></br><p style="text-align: left;padding:2%;">ou</p>
-          <%= link_to "Inscris toi", new_user_registration_path, :id => 'login', "data-toggle" => "modal", 'data-target' => '#signUpModal', class:"btn-forfaits-4" %>
   <% end %>
   </div>
   <div class="col-md-6">
@@ -69,14 +59,9 @@
   <span>Pour faire une estimation</span>
   </br>
   </br>
-<% if user_signed_in? %>
   <%= form_tag orders_path do %>
   <%= hidden_field_tag 'forfait_id', f.id %>
   <%= submit_tag 'Faire une estimation!', class: 'btn-forfaits-3' %>
-  <% end %>
-  <% else %>
-  <%= link_to "Connect toi", new_user_session_path, :id => 'login', "data-toggle" => "modal", 'data-target' => '#signInModal', class:"btn-forfaits" %></br><p style="text-align: left;padding:2%;">ou</p>
-          <%= link_to "Inscris toi", new_user_registration_path, :id => 'login', "data-toggle" => "modal", 'data-target' => '#signUpModal', class:"btn-forfaits" %>
   <% end %>
   </div>
   <div class="col-md-6">
@@ -93,14 +78,9 @@
   <span>Pour faire une estimation</span>
   </br>
   </br>
-<% if user_signed_in? %>
   <%= form_tag orders_path do %>
   <%= hidden_field_tag 'forfait_id', f.id %>
   <%= submit_tag 'Faire une estimation!', class: 'btn-forfaits-3' %>
-  <% end %>
-  <% else %>
-  <%= link_to "Connect toi", new_user_session_path, :id => 'login', "data-toggle" => "modal", 'data-target' => '#signInModal', class:"btn-forfaits-2" %></br><p style="text-align: left;padding:2%;">ou</p>
-          <%= link_to "Inscris toi", new_user_registration_path, :id => 'login', "data-toggle" => "modal", 'data-target' => '#signUpModal', class:"btn-forfaits-2" %>
   <% end %>
   </div>
   <div class="col-md-6">
