@@ -28,6 +28,14 @@
   <%= javascript_tag do %>
     $(document).ready(function() {
 
+    $("#go-down").click(function() {
+  $('#info_phone').toggleClass('hidden');
+  $('#info_email').toggleClass('hidden');
+  $('.bubble-1').toggleClass('hidden');
+  var paragraph = $('<div class="submission-bubble"><p>').text("Hello I'm new here");
+  $('#new_info > div.form-group.email.optional.info_email').append(paragraph);
+    });
+
 });
 
   <% end %>
