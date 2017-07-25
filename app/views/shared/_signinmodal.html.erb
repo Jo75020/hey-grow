@@ -22,11 +22,8 @@
       </div>
     </div>
 </div>
-
-<% content_for(:after_js) do %>
-  <%= javascript_tag do %>
-
-$(document).ready(function () {
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js">
+  $(document).ready(function () {
 
     $('#form-signin').validate({ // initialize the plugin
         rules: {
@@ -52,5 +49,10 @@ $(document).ready(function () {
 
 
 });
+</script>
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+
+
   <% end %>
 <% end %>
