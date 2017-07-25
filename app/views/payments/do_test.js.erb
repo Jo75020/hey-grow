@@ -1,0 +1,98 @@
+console.log("<%= @marketing_1 %>")
+
+var marketing_1 = "<%= @marketing_1 %>"
+var answer_1 = "<%= @answer_1 %>"
+var answer_2 = "<%= @answer_2 %>"
+var answer_3 = "<%= @answer_3 %>"
+var answer_4 = "<%= @answer_4 %>"
+var answer_5 = "<%= @answer_5 %>"
+var answer_6 = "<%= @answer_6 %>"
+var answer_7 = "<%= @answer_7 %>"
+
+
+if (marketing_1 == "1 à 3") {
+   marketing_1 = 300;
+} if (marketing_1 == "4 à 9") {
+    marketing_1 = 700;
+}
+ if (marketing_1 == "10+") {
+    marketing_1 = 1400;
+}
+ if (marketing_1 == "Aucune || Je ne sais pas") {
+    marketing_1 = 0;
+}
+
+if (answer_1 == "Oui")  {
+   answer_1 = 1500;
+} if (answer_1 == "Non") {
+    answer_1 = 0;
+}
+ if (answer_1 == "Je ne sais pas") {
+    answer_1 = 0;
+}
+
+if (answer_2 == "Oui") {
+   answer_2 = 1500;
+} if (answer_2 == "Non") {
+    answer_2 = 0;
+}
+ if (answer_2 == "Je ne sais pas") {
+    answer_2 = 0;
+}
+
+if (answer_3 == "Oui") {
+   answer_3 = 500;
+} if (answer_3 == "Non") {
+    answer_3 = 0;
+}
+ if (answer_3 == "Je ne sais pas") {
+    answer_3 = 0;
+}
+
+if (answer_4 == "Oui") {
+   answer_4 = 1000;
+} if (answer_4 == "Non") {
+    answer_4 = 0;
+}
+ if (answer_4 == "Je ne sais pas") {
+    answer_4 = 0;
+}
+
+if (answer_5 == "Oui") {
+   answer_5 = 1500;
+} if (answer_5 == "Non") {
+    answer_5 = 0;
+}
+ if (answer_5 == "Je ne sais pas") {
+    answer_5 = 0;
+}
+
+if (answer_6 == "Oui") {
+   answer_6 = 1000;
+} if (answer_6 == "Non") {
+    answer_6 = 0;
+}
+ if (answer_6 == "Je ne sais pas") {
+    answer_6 = 0;
+}
+
+if (answer_7 == "Oui") {
+   answer_7 = 2000;
+} if (answer_7 == "Non") {
+    answer_7 = 0;
+}
+ if (answer_7 == "Je ne sais pas") {
+    answer_7 = 0;
+}
+
+
+var result = marketing_1 + answer_1 + answer_2 + answer_3 + answer_4 + answer_5 + answer_6 + answer_7
+console.log(result);
+
+
+var paragraph = $('<p>').text(result + "€");
+
+
+ $('.result_wrapper').append(paragraph);
+
+

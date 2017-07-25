@@ -1,0 +1,25 @@
+.contact-header {
+  border-bottom:1px solid rgba(0, 0, 0, 0.12);
+}
+
+
+.submission-bubble {
+    background: #f8f8f8;
+    border-radius: 4px;
+    box-shadow: 0 2px 0 0 #dfe3e6, 0 0 0 1px #dfe3e6, inset 0 -1px 0 #dfe3e6;
+    margin-bottom: 20px;
+    color: #6c6c6c;
+    float: left;
+    clear: left;
+    padding: 20px;
+    position: relative;
+    display: inline-block;
+    width: auto;
+}
+
+#new_info > input.speaker {
+  background: #034e66;
+    color: #fff;
+    -webkit-transition: .1s linear;
+    transition: .1s linear;
+}

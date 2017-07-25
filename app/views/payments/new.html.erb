@@ -1,26 +1,152 @@
-<div class="banner-forfaits" style="background-image:linear-gradient(-225deg, rgb(127, 222, 212) 0%, rgba(127, 222, 212, 0.65) 30%), url('<%= asset_path("banner-checkout.jpg") %> ')">
-  <div class="padded"></div>
+<div class="banner-payments" style="background-image:linear-gradient(-225deg, rgb(127, 222, 212) 0%, rgba(127, 222, 212, 0.87) 30%), url('<%= asset_path("banner-checkout.jpg") %> ')">
   <div class="container">
   <div class="row">
+    <div class="col-xs-12 form-estimation">
+    <div class="starter-title">
+      <h1>Nous allons faire votre estimation pour un site <%= @order.forfait_title %></h1>
+        <span><%=  @order.forfait_description %></span>
+        </div>
+          <div class="padded-little"></div>
+          <button class="btn" id="start-btn">On commence !</button>
+          <%= form_tag('do_test', remote: true)  do %>
+            <div class="form_wrapper_1 formed">
+              <h4>Combien de pages marketing avez-vous besoin?</h4>
+              <span>ie. Comment ça marche, contactez-nous, équipe, about, presse, termes, FAQ, recrutement</span>
+              <div class="padded-little">
+                <i class="fa fa-file-text-o" aria-hidden="true" ></i>
+              </div>
+              <div class="form_row_1" style="display: flex;justify-content: space-between;">
+                <%  @all_marketing_options.each_with_index do |option, index| %>
+                <div class="button_1 button-f">
+                  <%= label_tag "marketing_#{index + 1}", option %>
+                  <%= check_box_tag "marketing_1", option, id: "option_#{index + 1}", value: "false"  %></br>
+                </div>
+                <% end  %>
+              </div>
+            </div>
+            <div class="form_wrapper_2 formed">
+              <h4>Est-ce que les users doivent se connecter?</h4>
+              <span>Une connexion par courrier électronique est généralement préférable de commencer à moins que votre application n'ait une intégration étroite avec des services comme Facebook ou Twitter, auquel cas la connexion par réseaux sociaux est meilleure.</span>
+              <div class="padded-little">
+              <i class="fa fa-user-plus" aria-hidden="true"></i>
+              </div>
+              <div class="form_row_2" style="display: flex;justify-content: space-between;">
+                <% @all_answers_options.each_with_index do |option, index| %>
+                <div class="button_2 button-f">
+                  <%= label_tag "answer_#{index + 1}", option %>
+                  <%= check_box_tag "answer_1", option, id: "option_#{index + 1}", value: "false"  %></br>
+                </div>
+                <% end  %>
+              </div>
+            </div>
+            <div class="form_wrapper_3 formed">
+              <h4>Est-ce que les users créent des profils personnels?</h4>
+              <span>Un profil signifie que certaines personnes qui utilisent votre application devront saisir des informations sur elles-mêmes qui pourraient être consultées publiquement.</span>
+              <div class="padded-little">
+              <i class="fa fa-id-card-o" aria-hidden="true"></i>
+              </div>
+              <div class="form_row_3" style="display: flex;justify-content: space-between;">
+                <% @all_answers_options.each_with_index do |option, index| %>
+                <div class="button_3 button-f">
+                  <%= label_tag "answer_#{index + 2}", option %>
+                  <%= check_box_tag "answer_2", option, id: "option_#{index + 1}", value: "false"  %></br>
+                  </div>
+                <% end  %>
+              </div>
+            </div>
+            <div class="form_wrapper_4 formed">
+              <h4>Devrez-vous accepter les paiements?</h4>
+              <span>Acceptez les cartes de crédit, PayPal, Bitcoin.</span>
+              <div class="padded-little">
+              <i class="fa fa-credit-card" aria-hidden="true"></i>
+              </div>
+              <div class="form_row_4" style="display: flex;justify-content: space-between;">
+                <% @all_answers_options.each_with_index do |option, index| %>
+                <div class="button_4 button-f">
+                  <%= label_tag "answer_#{index + 3}", option %>
+                  <%= check_box_tag "answer_3", option, id: "option_#{index + 1}", value: "false"  %></br>
+                  </div>
+                <% end  %>
+              </div>
+            </div>
+            <div class="form_wrapper_5 formed">
+              <h4>Est-ce que les users évaluent ou commente des choses?</h4>
+              <span>People leave reviews and/or rate things.</span>
+              <div class="padded-little">
+              <i class="fa fa-commenting-o" aria-hidden="true"></i>
+              </div>
+              <div class="form_row_5" style="display: flex;justify-content: space-between;">
+                <% @all_answers_options.each_with_index do |option, index| %>
+                <div class="button_5 button-f">
+                  <%= label_tag "answer_#{index + 4}", option %>
+                  <%= check_box_tag "answer_4", option, id: "option_#{index + 1}", value: "false"  %></br>
+                  </div>
+                <% end  %>
+              </div>
+            </div>
+            <div class="form_wrapper_6 formed">
+              <h4>Votre site Web doit-il se connecter à une application ou à un autre site Web?</h4>
+              <span>Cela signifie que vous devrez créer une API (ou une interface de programmation d'applications). C'est ainsi que toutes vos applications conviviales se parlent.</span>
+              <div class="padded-little">
+              <i class="fa fa-connectdevelop" aria-hidden="true"></i>
+              </div>
+              <div class="form_row_6" style="display: flex;justify-content: space-between;">
+                <% @all_answers_options.each_with_index do |option, index| %>
+                <div class="button_6 button-f">
+                  <%= label_tag "answer_#{index + 5}", option %>
+                  <%= check_box_tag "answer_5", option, id: "option_#{index + 1}", value: "false"  %></br>
+                  </div>
+                <% end  %>
+              </div>
+            </div>
+            <div class="form_wrapper_7 formed">
+              <h4>Votre site Web a-t-il besoin d'une "search"?</h4>
+              <span>Le coût de la création d'une fonction de recherche peut varier considérablement. Le prix indiqué ici est une moyenne pour l'intégration de la recherche basée sur le marquage de base. Pas Google.</span>
+              <div class="padded-little">
+              <i class="fa fa-search-plus" aria-hidden="true"></i>
+              </div>
+              <div class="form_row_7" style="display: flex;justify-content: space-between;">
+                <% @all_answers_options.each_with_index do |option, index| %>
+                <div class="button_7 button-f">
+                  <%= label_tag "answer_#{index + 6}", option %>
+                  <%= check_box_tag "answer_6", option, id: "option_#{index + 1}", value: "false"  %></br>
+                  </div>
+                <% end  %>
+              </div>
+            </div>
+            <div class="form_wrapper_8 formed">
+              <h4>Avez-vous besoin d'un Système de gestion de contenu (CMS)?</h4>
+              <span>Un CMS vous permettra de mettre à jour le contenu de votre site sans écrire de code (c'est-à-dire un blog).</span>
+              <div class="padded-little">
+              <i class="fa fa-server" aria-hidden="true"></i>
+              </div>
+              <div class="form_row_8" style="display: flex;justify-content: space-between;">
+                <% @all_answers_options.each_with_index do |option, index| %>
+                <div class="button_8 button-f">
+                  <%= label_tag "answer_#{index + 7}", option %>
+                  <%= check_box_tag "answer_7", option, id: "option_#{index + 1}", value: "false"  %></br>
+                </div>
+                <% end  %>
+              </div>
+            </div>
 
-      <div class="banner-content" >
-  <h1>Vous allez commander un site <%= @order.forfait_title %></h1>
-          <% image_tag "logo.png" %>
-          <p><%=  @order.forfait_description %></p>
-          <%= form_tag order_payments_path(@order) do %>
-          <article>
-            <label class="amount">
-              <span>Total: <%= humanized_money_with_symbol(@order.amount) %></span>
-            </label>
-          </article>
-          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-            data-name="Forfait <%= @order.forfait_title %>"
-            data-description="Plus qu'un clic !"
-            data-amount="<%= @order.amount_cents %>"
-            data-currency="<%= @order.amount.currency %>"></script>
+            <div class="result_wrapper hidden">
+            <p>Votre estimation</p>
+            <span style="font-size: 16px;">Chez Hey GroW, nous avons sélectionné à la main les meilleurs développeurs d'applications et de sites Web. Commencez votre projet ou consultez quelques exemples de travaux effectués avec nous.</span>
+            </div>
+            <div class="div-final">
+            <%= link_to "Lancer votre projet avec Hey Grow -> ", infos_contact_path, :id => 'go-to-contact', class:"go-form-contact btn hidden" %>
+            <%= link_to "Retourner à la page des forfaits", forfaits_path, :id => 'go-to-forfaits', class:"go-form-contact btn-2 hidden" %>
+            </div>
+
+              <span class="loader hidden"><span class="loader-inner"></span></span>
+
+            <div class="submit_button">
+              <% hidden_field_tag 'order_id', @order_id = @order.id %>
+              <%= submit_tag "C'est parti !", :class => "btn btn-primary", :id => "submit_form" %>
           <% end %>
-      </div>
+          </div>
+    </div>
       </div>
     </div>
 </div>
@@ -28,7 +154,92 @@
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
     $(document).ready(function() {
-    $("#mynav").toggleClass("displayed");
-    });
+    $("#mynav").removeClass("displayed");
+
+  $('input[type=checkbox]').removeAttr('checked');
+  $('.form_wrapper_1').toggleClass('hidden');
+  $('.form_wrapper_2').toggleClass('hidden');
+  $('.form_wrapper_3').toggleClass('hidden');
+  $('.form_wrapper_4').toggleClass('hidden');
+  $('.form_wrapper_5').toggleClass('hidden');
+  $('.form_wrapper_6').toggleClass('hidden');
+  $('.form_wrapper_7').toggleClass('hidden');
+  $('.form_wrapper_8').toggleClass('hidden');
+  $('.submit_button').toggleClass('hidden');
+
+
+$( "#start-btn").click(function() {
+  $(".form_wrapper_1").toggleClass('hidden');
+  $("#start-btn").toggleClass('hidden');
+  $(".starter-title").toggleClass('hidden');
+
+});
+
+$( ".button_1").click(function() {
+  $(".form_wrapper_1").toggleClass('hidden');
+  $(".form_wrapper_2").toggleClass('hidden');
+});
+
+$( ".button_2").click(function() {
+  $(".form_wrapper_2").toggleClass('hidden');
+  $(".form_wrapper_3").toggleClass('hidden');
+});
+
+$( ".button_3").click(function() {
+  $(".form_wrapper_3").toggleClass('hidden');
+  $(".form_wrapper_4").toggleClass('hidden');
+});
+
+$( ".button_4").click(function() {
+  $(".form_wrapper_4").toggleClass('hidden');
+  $(".form_wrapper_5").toggleClass('hidden');
+});
+
+$( ".button_5").click(function() {
+  $(".form_wrapper_5").toggleClass('hidden');
+  $(".form_wrapper_6").toggleClass('hidden');
+});
+
+$( ".button_6").click(function() {
+  $(".form_wrapper_6").toggleClass('hidden');
+  $(".form_wrapper_7").toggleClass('hidden');
+});
+
+$( ".button_7").click(function() {
+  $(".form_wrapper_7").toggleClass('hidden');
+  $(".form_wrapper_8").toggleClass('hidden');
+});
+
+$( ".button_8").click(function() {
+  $(".form_wrapper_8").toggleClass('hidden');
+  $('.submit_button').toggleClass('hidden');
+
+});
+
+$( ".submit_button").click(function() {
+  $('.loader').toggleClass('hidden');
+  $('.submit_button').toggleClass('hidden');
+$(document).ready(function() {
+
+  function myTimeoutHomeFunction()
+  {
+    setTimeout(function(){
+  $('.loader').toggleClass('hidden');
+  $('.result_wrapper').toggleClass('hidden');
+  $('.go-form-contact').toggleClass('hidden');
+    }, 1050);
+  }
+
+  myTimeoutHomeFunction();
+
+
+});
+
+
+});
+
+
+});
+
   <% end %>
 <% end %>

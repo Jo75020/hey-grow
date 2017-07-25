@@ -1,4 +1,4 @@
-<div class="navbar-wagon navbar-wagon-fixed displayed" id="mynav">
+<div class="navbar-wagon navbar-wagon-fixed" id="mynav">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "logo-4.png" %>
@@ -25,8 +25,8 @@
     <% end %>
 
     <!-- Button (call-to-action) -->
-    <%= link_to "Forfaits", forfaits_path, class: "btn" %>
-    <%= link_to "Formations", forfaits_path, class: "btn" %>
+    <%= link_to "Forfaits", forfaits_path, class: "btn-nav" %>
+    <%= link_to "Formations", forfaits_path, class: "btn-nav" %>
  <% if user_signed_in? %>
         <p class="btn-nav"><%= current_user.username %></p>
         <%= link_to destroy_user_session_path, method: :delete, class: 'btn-nav' do %>
@@ -60,18 +60,6 @@
 
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
-    $(document).ready(function() {
 
-window.onscroll = function() {myFunction()};
-
-function myFunction() {
-    if (document.body.scrollTop > 50 ) {
-        document.getElementById("mynav").className = "navbar-wagon navbar-wagon-fixed";
-    } else {
-        document.getElementById("mynav").className = "navbar-wagon navbar-wagon-fixed displayed";
-    }
-}
-
-});
   <% end %>
 <% end %>

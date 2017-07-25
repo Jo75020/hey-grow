@@ -14,15 +14,16 @@
 <% f = Forfait.third  %>
 <div class="col-md-6 forfait-wrapper" style="background:linear-gradient(30deg, rgb(15, 87, 110) 0%, rgb(50, 111, 131) 30%)">
   <div class="col-md-6">
-    <p style="text-align: right;"><%= humanized_money_with_symbol(f.price) %></p>
+    <p style="text-align: right;"></p>
   <h3><%= f.title  %></h3>
-  <span><%= f.description %>.</span>
+  <span><%= f.description %>.</span></br></br>
+  <span>Pour faire une estimation</span>
   </br>
   </br>
   <% if user_signed_in? %>
   <%= form_tag orders_path do %>
   <%= hidden_field_tag 'forfait_id', f.id %>
-  <%= submit_tag 'Commandez maintenant !', class: 'btn-forfaits-3' %>
+  <%= submit_tag 'Faire une estimation!', class: 'btn-forfaits-3' %>
   <% end %>
   <% else %>
   <%= link_to "Connect toi", new_user_session_path, :id => 'login', "data-toggle" => "modal", 'data-target' => '#signInModal', class:"btn-forfaits-3" %></br><p style="text-align: left;padding:2%;">ou</p>
@@ -38,15 +39,16 @@
 <% f = Forfait.second  %>
 <div class="col-md-6 forfait-wrapper" style="background:linear-gradient(-30deg, rgb(127, 222, 212) 0%, rgb(127, 222, 212) 30%);">
   <div class="col-md-6">
-    <p style="text-align: right;"><%= humanized_money_with_symbol(f.price) %></p>
+    <p style="text-align: right;"></p>
   <h3><%= f.title  %></h3>
-  <span><%= f.description %>.</span>
+  <span><%= f.description %>.</span></br></br>
+  <span>Pour faire une estimation</span>
   </br>
   </br>
 <% if user_signed_in? %>
   <%= form_tag orders_path do %>
   <%= hidden_field_tag 'forfait_id', f.id %>
-  <%= submit_tag 'Commandez maintenant !', class: 'btn-forfaits-3' %>
+  <%= submit_tag 'Faire une estimation!', class: 'btn-forfaits-3' %>
   <% end %>
   <% else %>
   <%= link_to "Connect toi", new_user_session_path, :id => 'login', "data-toggle" => "modal", 'data-target' => '#signInModal', class:"btn-forfaits-4" %></br><p style="text-align: left;padding:2%;">ou</p>
@@ -61,15 +63,16 @@
 <% f = Forfait.first  %>
 <div class="col-md-6 forfait-wrapper" id="here-is-down" style="background:linear-gradient(-225deg, rgb(250, 116, 119) 0%, rgb(213, 76, 84) 30%)">
   <div class="col-md-6">
-    <p style="text-align: right;"><%= humanized_money_with_symbol(f.price) %></p>
+    <p style="text-align: right;"></p>
   <h3><%= f.title  %></h3>
-  <span><%= f.description %>.</span>
+  <span><%= f.description %>.</span></br></br>
+  <span>Pour faire une estimation</span>
   </br>
   </br>
 <% if user_signed_in? %>
   <%= form_tag orders_path do %>
   <%= hidden_field_tag 'forfait_id', f.id %>
-  <%= submit_tag 'Commandez maintenant !', class: 'btn-forfaits-3' %>
+  <%= submit_tag 'Faire une estimation!', class: 'btn-forfaits-3' %>
   <% end %>
   <% else %>
   <%= link_to "Connect toi", new_user_session_path, :id => 'login', "data-toggle" => "modal", 'data-target' => '#signInModal', class:"btn-forfaits" %></br><p style="text-align: left;padding:2%;">ou</p>
@@ -84,15 +87,16 @@
 <% f = Forfait.last  %>
 <div class="col-md-6 forfait-wrapper" style="background:linear-gradient(225deg, rgb(78, 44, 49) 0%, rgb(70, 52, 58) 30%)">
   <div class="col-md-6">
-    <p style="text-align: right;"><%= humanized_money_with_symbol(f.price) %></p>
+    <p style="text-align: right;"><% humanized_money_with_symbol(f.price) %></p>
   <h3><%= f.title  %></h3>
-  <span><%= f.description %>.</span>
+  <span><%= f.description %>.</span></br></br>
+  <span>Pour faire une estimation</span>
   </br>
   </br>
 <% if user_signed_in? %>
   <%= form_tag orders_path do %>
   <%= hidden_field_tag 'forfait_id', f.id %>
-  <%= submit_tag 'Commandez maintenant !', class: 'btn-forfaits-3' %>
+  <%= submit_tag 'Faire une estimation!', class: 'btn-forfaits-3' %>
   <% end %>
   <% else %>
   <%= link_to "Connect toi", new_user_session_path, :id => 'login', "data-toggle" => "modal", 'data-target' => '#signInModal', class:"btn-forfaits-2" %></br><p style="text-align: left;padding:2%;">ou</p>

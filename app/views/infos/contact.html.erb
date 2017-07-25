@@ -1,0 +1,34 @@
+<div class="padded-little"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 contact-header text-center">
+      <h1 style="color: #034e66;">Commencer un nouveau projet</h1>
+      <p style="color:#9ea4a8!important">Notre formulaire est composé d'environ 4-5 questions et prend environ 2 à 3 minutes pour être complété.</p>
+    </div>
+    <div class="padded"></div>
+    <div class="col-md-6">
+      <div class="submission-bubble bubble-1" >
+      <p>Hey there! <i class="fa fa-hand-peace-o" aria-hidden="true"></i></p>
+      </div>
+      <div class="submission-bubble">
+      <p>Avant de commencer, nous aurons besoin d'un peu d'informations pour suivre votre projet.</p>
+      </div>
+      <%= simple_form_for @info, remote: true  do |f| %>
+      <%= f.input :email, placeholder: 'Email', label: 'Email' %>
+      <%= f.input :phone, placeholder: 'Téléphone', label: 'Téléphone' %>
+      <%= f.button :submit, 'Envoyer', class:"speaker", id:"go"%>
+    <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $(document).ready(function() {
+
+});
+
+  <% end %>
+<% end %>

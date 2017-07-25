@@ -11,6 +11,7 @@ gem 'puma'
 gem 'rails', '5.0.2'
 gem 'redis'
 
+gem 'nokogiri', '~> 1.6', '>= 1.6.6.2'
 gem 'money-rails'
 gem 'stripe'
 gem 'autoprefixer-rails'

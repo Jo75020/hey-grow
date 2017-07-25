@@ -1,5 +1,7 @@
 class OrdersController < ApplicationController
       skip_before_action :authenticate_user!, only: [:create,:show]
+
+
   def create
       @forfait = Forfait.find(params[:forfait_id])
   order  = Order.create!(forfait_title: @forfait.title,forfait_description: @forfait.description, amount: @forfait.price, state: 'pending')

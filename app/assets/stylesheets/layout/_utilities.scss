@@ -38,13 +38,12 @@ a.fa {
 }
 
 .btn {
-    background: white;
-    color: #7fded4;
+    background: #7fded4;
+    color: white;
     border-radius: 7px;
     margin-bottom: 10px;
     -webkit-transition: 1s;
     transition: 1s;
-    border: 1px solid white;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 1%;
@@ -52,11 +51,10 @@ a.fa {
 }
 
 .btn:hover {
-  background-color:#7fded4;
-  color: white;
+  background-color: white;
+  color: #7fded4;
   transition: 1s;
   border-color: white;
-  border: 1px solid;
 }
 .btn-nav {
     background: white;
