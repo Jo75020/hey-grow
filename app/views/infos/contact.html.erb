@@ -14,8 +14,8 @@
       <p>Avant de commencer, nous aurons besoin d'un peu d'informations pour suivre votre projet.</p>
       </div>
       <%= simple_form_for @info, remote: true  do |f| %>
-      <%= f.input :email, placeholder: 'Email', label: 'Email' %>
-      <%= f.input :phone, placeholder: 'Téléphone', label: 'Téléphone' %>
+      <%= f.input :email, placeholder: 'Email', label: 'Email', required: true %>
+      <%= f.input :phone, placeholder: 'Téléphone', label: 'Téléphone', required: true %>
       <%= f.button :submit, 'Envoyer', class:"speaker", id:"go"%>
     <% end %>
     </div>
